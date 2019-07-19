@@ -1,0 +1,15 @@
+{{#post}}
+  <article class="post" {{post_class}}>
+    {{#if feature_image}}
+    {{/if}}
+    <h1 class="title">{{title}}</h1>
+    <time class="publish-date">{{date format="dddd, MMMM Do YYYY"}}</time>
+    <div class="content">
+      <section class="full">
+        {{content}}
+      </section>
+      <footer class="meta">
+      </footer>
+    </div>
+  </article>
+{{/post}}

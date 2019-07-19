@@ -1,0 +1,92 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: monospace;
+  color: $accent;
+}
+
+h1 {
+  font-size: 2.25em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0 25px;
+}
+
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin: 10px 0 25px;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+p,
+input,
+em,
+b,
+blockquote,
+pre,
+ol,
+ul,
+li,
+table {
+  font-family: sans-serif;
+  color: $black;
+  line-height: 1.5rem;
+}
+
+a {
+  color: $muted-accent;
+  text-decoration: none;
+  border-bottom: 3px solid $muted-accent;
+  font-weight: bold;
+}
+
+p {
+  margin: 15px 0;
+}
+
+ul,
+ol {
+  margin: 10px 0;
+  li {
+    margin: 10px 0 5px 15px;
+  }
+}
+
+blockquote {
+  display: block;
+  position: relative;
+  font-size: 1.5em;
+  padding: 20px 10px 20px 25px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    background: $accent;
+  }
+}
