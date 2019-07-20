@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":["$","hljs","initHighlightingOnLoad"],"mappings":"AAAAA,EAAE,WACAC,KAAKC","file":"index.js","sourcesContent":["$(function() {\n  hljs.initHighlightingOnLoad();\n});\n"]}
