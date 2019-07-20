@@ -9,7 +9,7 @@ const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const csso = require("gulp-csso");
 // Building: JS
-const uglify = require("gulp-uglify");
+const uglify = require("gulp-uglifyes");
 // Utils
 const browserSync = require("browser-sync").create();
 
@@ -39,7 +39,7 @@ gulp.task("js", function(done) {
   gulp
     .src("assets/js/*.js")
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(uglify({ mangle: false, ecma: 6 }).on("error", e => console.error(e)))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("assets/built"));
   done();

@@ -1,0 +1,27 @@
+{{!< default}}
+{{#post}}
+  <main id="site-main" class="site-main">
+    <div class="inner">
+      <article class="post" {{post_class}}>
+        <time class="publish-date">
+          {{date format="MMMM Do YYYY"}}
+        </time>
+        {{#if feature_image}}{{/if}}
+        <h1 class="title">
+          <a href="{{url}}">
+            {{title}}
+          </a>
+        </h1>
+        <div class="tags">
+          {{tags}}
+        </div>
+        <div class="content">
+          <section class="full">
+            {{content}}
+          </section>
+          <footer class="meta"></footer>
+        </div>
+      </article>
+    </div>
+  </main>
+{{/post}}

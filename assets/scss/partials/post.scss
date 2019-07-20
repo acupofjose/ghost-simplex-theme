@@ -12,16 +12,76 @@
 
 article.post {
   display: block;
+  position: relative;
   padding: 25px;
   margin: 15px auto;
   border-radius: 3px;
   background: $white;
   box-sizing: border-box;
 
+  h1.title {
+    margin-bottom: 0px;
+    a {
+      line-height: 1em;
+      border-bottom: none;
+    }
+  }
+
+  .tags {
+    margin-bottom: 5px;
+    a {
+      font-size: 0.9rem;
+      border-width: 1px;
+      margin: 0;
+    }
+  }
+
+  time.publish-date {
+    position: absolute;
+    z-index: 1;
+    box-sizing: border-box;
+    left: 0;
+    top: -30px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: $white;
+    padding: 3px 15px 3px 15px;
+    background: $muted-accent;
+    border-radius: 5px 5px 0 0;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
   &.post-excerpt {
+    min-height: 275px;
     display: block;
+    z-index: 10;
     flex-grow: 1;
     max-width: 500px;
-    margin: 10px 15px;
+    margin: 30px 15px;
+    box-shadow: 2px 2px 4px darken($white, 50%);
+    transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background: lighten($white, 5%);
+      transform: translate(-2px, -2px);
+      box-shadow: 3px 3px 5px darken($white, 40%);
+
+      time {
+        background: darken($muted-accent, 10%);
+      }
+    }
+
+    &.has-featured-image {
+      padding: 0;
+      & > .content {
+        padding: 15px 25px 25px;
+      }
+    }
+  }
+
+  &:not(.post-excerpt) {
+    max-width: 800px;
+    box-shadow: 2px 2px 4px darken($white, 50%);
   }
 }

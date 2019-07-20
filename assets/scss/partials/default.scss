@@ -25,6 +25,7 @@ body > .wrapper {
   .content-wrapper {
     display: block;
     float: right;
+    padding-top: 30px;
     box-sizing: border-box;
     width: calc(100vw - #{$sidebar-width});
   }

@@ -1,13 +1,28 @@
+{{#if feature_image}}
+<article class="post post-excerpt has-featured-image" {{post_class}}>
+{{else}}
 <article class="post post-excerpt" {{post_class}}>
+{{/if}}
+  <time class="publish-date">
+    {{date format="MMMM Do YYYY"}}
+  </time>
   {{#if feature_image}}
+    <img src="{{feature_image}}" alt="feature" />
   {{/if}}
-  <h1 class="title">{{title}}</h1>
-  <time class="publish-date">{{date format="dddd, MMMM Do YYYY"}}</time>
   <div class="content">
-    <section class="full">
-      {{excerpt}}
-    </section>
-    <footer class="meta">
-    </footer>
+    <h1 class="title">
+      <a href="{{url}}">
+        {{title}}
+      </a>
+    </h1>
+    <div class="tags">
+      {{tags}}
+    </div>
+    <div class="content">
+      <section class="full">
+        {{excerpt characters="275"}}
+      </section>
+      <footer class="meta"></footer>
+    </div>
   </div>
 </article>

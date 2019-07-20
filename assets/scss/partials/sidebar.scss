@@ -10,35 +10,63 @@
   width: 300px;
   height: 100vh;
   background: $muted-accent;
-  border-right: 3px solid darken($muted-accent, 15%);
-
-  h1,
-  h2 {
-    color: $white;
-  }
+  box-shadow: 3px 0 3px lighten($muted-accent, 10%);
+  border-right: 2px solid lighten($muted-accent, 10%);
 
   .inner {
     display: block;
-    margin-top: 125px;
+    margin-top: 50px;
     height: 100%;
+
+    h1,
+    h2 {
+      color: $white;
+    }
+
+    h2 {
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      margin-top: 50px;
+      li {
+        margin: 10px 0;
+      }
+      a {
+        display: block;
+        color: $white;
+      }
+    }
+
+    .logo {
+      img {
+        box-sizing: border-box;
+        max-width: 100%;
+        padding: 25px;
+      }
+    }
   }
 
   footer.site-footer {
     position: absolute;
-    width: 100%;
-    bottom: 0px;
+    width: $sidebar-width;
+    bottom: -10px;
     text-align: center;
     line-height: 1.5rem;
     padding: 10px 0 30px;
     color: $white;
-    nav {
-      margin: 15px;
+
+    section.social-links {
+      a {
+        color: $white;
+      }
     }
     section.copyright {
       font-size: 0.75rem;
       a {
-        color: white;
-        border-color: white;
+        color: $white;
+        border-color: $white;
         border-width: 1px;
       }
     }
