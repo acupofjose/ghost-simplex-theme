@@ -8,23 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/zenburn.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <script src="https://kit.fontawesome.com/f6de1a174c.js"></script>
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
     <div class="wrapper">
-      {{{body}}}
-      <footer class="site-footer">
-        <div class="inner">
-          <nav>
-            <a href="{{@site.url}}">Home</a>
-          </nav>
-          <section class="copyright">
-            <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
-          </section>
-        </div>
-      </footer>
+      <div class="sidebar-wrapper">
+        {{> "sidebar"}}
+      </div>
+      <div class="content-wrapper">
+        {{{body}}}
+      </div>
     </div>
-
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

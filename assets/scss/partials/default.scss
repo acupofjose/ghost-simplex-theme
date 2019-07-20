@@ -1,0 +1,31 @@
+html,
+body {
+  background: $secondary;
+}
+
+img {
+  max-width: 100%;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+body > .wrapper {
+  display: inline-block;
+
+  .sidebar-wrapper {
+    display: block;
+    width: $sidebar-width;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .content-wrapper {
+    display: block;
+    float: right;
+    box-sizing: border-box;
+    width: calc(100vw - #{$sidebar-width});
+  }
+}

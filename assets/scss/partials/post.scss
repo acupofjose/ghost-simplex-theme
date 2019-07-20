@@ -1,0 +1,27 @@
+.post-feed {
+  display: block;
+  margin: 0 auto;
+  &.excerpts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+article.post {
+  display: block;
+  padding: 25px;
+  margin: 15px auto;
+  border-radius: 3px;
+  background: $white;
+  box-sizing: border-box;
+
+  &.post-excerpt {
+    display: block;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 10px 15px;
+  }
+}

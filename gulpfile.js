@@ -1,15 +1,23 @@
 const gulp = require("gulp");
+
+// Building
+const clean = require("gulp-clean");
+const sourcemaps = require("gulp-sourcemaps");
+const zip = require("gulp-zip");
+// Building: SASS
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const csso = require("gulp-csso");
-const sourcemaps = require("gulp-sourcemaps");
-const clean = require("gulp-clean");
+// Building: JS
 const uglify = require("gulp-uglify");
+// Utils
 const browserSync = require("browser-sync").create();
 
 gulp.task("clean", function(done) {
-  gulp.src("assets/built/*", { read: false }).pipe(clean());
-  done();
+  Promise.all([
+    gulp.src("assets/built/*", { read: false }).pipe(clean()),
+    gulp.src("assets/css/*", { read: false }).pipe(clean())
+  ]).then(() => done());
 });
 
 gulp.task("sass", function(done) {
@@ -21,6 +29,8 @@ gulp.task("sass", function(done) {
     .pipe(csso())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("assets/built"))
+    // this line has to be added to maintain compatability with gscan (stupid.)
+    .pipe(gulp.dest("assets/css"))
     .pipe(browserSync.stream());
   done();
 });
@@ -35,21 +45,40 @@ gulp.task("js", function(done) {
   done();
 });
 
-gulp.task("develop", function() {
+gulp.task("zip", function(done) {
+  const targetDir = "dist/";
+  const themeName = require("./package.json").name;
+  const filename = themeName + ".zip";
+
+  gulp
+    .src(["**", "!node_modules", "!node_modules/**", "!dist", "!dist/**"])
+    .pipe(zip(filename))
+    .pipe(gulp.dest(targetDir));
+
+  done();
+});
+
+gulp.task("build", gulp.series("clean", "sass", "js"));
+
+const reloadOnHBSChange = done => {
+  browserSync.reload();
+  done();
+};
+
+const reloadOnJSChange = done => {
+  browserSync.reload();
+  done();
+};
+
+const watch = () => {
   browserSync.init({
     proxy: "localhost:2368",
     open: "local"
   });
 
-  gulp.watch("**/*.hbs", browserSync.reload);
   gulp.watch("assets/scss/**/*.scss", gulp.series("sass"));
-  gulp.watch(
-    "assets/js/*.js",
-    gulp.series("js", done => {
-      browserSync.reload();
-      done();
-    })
-  );
-});
+  gulp.watch("**/*.hbs", reloadOnHBSChange);
+  gulp.watch("assets/js/*.js", gulp.series("js", reloadOnJSChange));
+};
 
-gulp.task("build", gulp.series("clean", "sass", "js"));
+gulp.task("develop", gulp.series("build", watch));

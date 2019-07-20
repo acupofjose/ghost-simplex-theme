@@ -1,26 +1,9 @@
+@import "vendor/balloon-css/balloon";
 @import "partials/vars";
 @import "partials/reset";
+@import "partials/compat";
+@import "partials/default";
 @import "partials/typography";
-@import "partials/single-post";
+@import "partials/sidebar";
+@import "partials/post";
 @import "partials/footer";
-
-html,
-body {
-  background: $secondary;
-}
-
-img {
-  max-width: 100%;
-}
-
-pre {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-body > .wrapper {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 650px;
-}
