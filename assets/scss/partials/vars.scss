@@ -1,8 +1,28 @@
-$primary: #8e8d8a;
-$secondary: #d8c3a5;
+/* Colors */
+$grey: #8e8d8a;
+$off-white: #d8c3a5;
 $accent: #e85a4f;
 $muted-accent: #e98074;
 $white: #eae7dc;
-$black: darken($primary, 25%);
+$black: darken($grey, 25%);
 
+$primary-background-color: $off-white;
+
+/* Typography */
+$header-text-color: $accent;
+$primary-text-color: $black;
+$inverted-text-color: $white;
+$accent-text-color: $accent;
+
+/* Sidebar */
 $sidebar-width: 300px;
+$sidebar-text-color: $white;
+$sidebar-background-color: $accent;
+$sidebar-border-color: $muted-accent;
+
+/* Footer (of sidebar) */
+$footer-text-color: $white;
+
+/* Post */
+$post-background-color: $white;
+$post-accent-color: $muted-accent;

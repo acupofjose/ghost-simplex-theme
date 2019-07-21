@@ -4,7 +4,7 @@ h3,
 h4,
 h5 {
   font-family: monospace;
-  color: $accent;
+  color: $header-text-color;
 }
 
 h1 {
@@ -56,14 +56,14 @@ ul,
 li,
 table {
   font-family: sans-serif;
-  color: $black;
+  color: $primary-text-color;
   line-height: 1.5rem;
 }
 
 a {
-  color: $muted-accent;
+  color: $accent-text-color;
   text-decoration: none;
-  border-bottom: 3px solid $muted-accent;
+  border-bottom: 3px solid $accent-text-color;
   font-weight: bold;
 }
 
@@ -91,6 +91,6 @@ blockquote {
     left: 0;
     bottom: 0;
     width: 3px;
-    background: $accent;
+    background: $accent-text-color;
   }
 }

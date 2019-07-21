@@ -16,7 +16,7 @@ article.post {
   padding: 25px;
   margin: 15px auto;
   border-radius: 3px;
-  background: $white;
+  background: $post-background-color;
   box-sizing: border-box;
 
   h1.title {
@@ -46,7 +46,7 @@ article.post {
     font-weight: bold;
     color: $white;
     padding: 3px 15px 3px 15px;
-    background: $muted-accent;
+    background: $post-accent-color;
     border-radius: 5px 5px 0 0;
     transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
@@ -58,17 +58,17 @@ article.post {
     flex-grow: 1;
     max-width: 500px;
     margin: 30px 15px;
-    box-shadow: 2px 2px 4px darken($white, 50%);
+    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
     transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
       box-shadow 0.15s ease-in-out;
 
     &:hover {
       background: lighten($white, 5%);
       transform: translate(-2px, -2px);
-      box-shadow: 3px 3px 5px darken($white, 40%);
+      box-shadow: 3px 3px 5px darken($post-background-color, 40%);
 
       time {
-        background: darken($muted-accent, 10%);
+        background: darken($post-accent-color, 10%);
       }
     }
 
@@ -82,6 +82,6 @@ article.post {
 
   &:not(.post-excerpt) {
     max-width: 800px;
-    box-shadow: 2px 2px 4px darken($white, 50%);
+    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
   }
 }
