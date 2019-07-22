@@ -1,4 +1,4 @@
-# Ghost Simplex Theme
+# Ghost Simplex Theme.
 
 [![Build Status](https://travis-ci.org/acupajoe/ghost-simplex-theme.svg?branch=master)](https://travis-ci.org/acupajoe/ghost-simplex-theme)
 ![License](https://img.shields.io/github/license/acupajoe/ghost-simplex-theme.svg)
@@ -22,11 +22,11 @@ Currently there is a dark theme and a light theme available for download.
 - [x] Sidebar
 - [x] Default & Index Templates
 - [x] Post Excerpt Template
-- [-] Compatibility with `.kg-gallery-*`
-- [-] Single Post Template
+- [ ] Compatibility with `.kg-gallery-*`
+- [ ] Single Post Template
 - [ ] Author Template
 - [ ] Category/Tags Template
-- [-] Responsiveness
+- [x] Responsiveness
 - [ ] Provision for Featured Posts
 
 **Meta**
