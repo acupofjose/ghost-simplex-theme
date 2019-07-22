@@ -9,7 +9,8 @@
     align-items: center;
     justify-content: flex-start;
     overflow-x: auto;
-    min-height: 90vh;
+    height: 90vh;
+    min-height: 800px;
     @include respond-above(md) {
       min-height: 100vh;
     }
@@ -23,33 +24,28 @@
     }
   }
 
-  .featured-image {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
   &.has-featured-image {
-    article.post {
+    .featured-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    article.post-full {
       margin-top: -150px;
-
-      &.post-excerpt {
-        display: block;
-        border-radius: 3px;
-        z-index: 10;
-        flex-grow: 1;
-        max-width: 500px;
-        padding: 0;
-        margin: 30px 15px;
-      }
-
       & > .content {
         padding: 15px 25px 25px;
+      }
+    }
+
+    article.post-excerpt {
+      padding: 0;
+      & > .content {
+        padding: 15px;
       }
     }
   }
@@ -63,6 +59,42 @@ article.post {
   border-radius: 3px;
   background: $post-background-color;
   box-sizing: border-box;
+
+  &.post-full {
+    max-width: 800px;
+    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
+  }
+
+  &.post-excerpt {
+    display: block;
+    min-width: 350px;
+    border-radius: 3px;
+    z-index: 10;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 30px 15px;
+    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
+    transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      background: lighten($post-background-color, 5%);
+      transform: translate(-2px, -2px);
+      box-shadow: 3px 3px 5px darken($post-background-color, 40%);
+
+      time {
+        background: darken($post-accent-color, 10%);
+      }
+    }
+
+    a.feature-link > div {
+      height: 275px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 
   a {
     border-bottom: 3px solid $accent-text-color;
@@ -103,37 +135,5 @@ article.post {
     background: $post-accent-color;
     border-radius: 5px 5px 0 0;
     transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-
-  &.post-excerpt {
-    display: block;
-    min-width: 350px;
-    border-radius: 3px;
-    z-index: 10;
-    flex-grow: 1;
-    max-width: 500px;
-    margin: 30px 15px;
-    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
-    transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-
-    &:first-child {
-      padding-top: 35px;
-    }
-
-    &:hover {
-      background: lighten($post-background-color, 5%);
-      transform: translate(-2px, -2px);
-      box-shadow: 3px 3px 5px darken($post-background-color, 40%);
-
-      time {
-        background: darken($post-accent-color, 10%);
-      }
-    }
-  }
-
-  &:not(.post-excerpt) {
-    max-width: 800px;
-    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
   }
 }
