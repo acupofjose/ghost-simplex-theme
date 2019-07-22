@@ -1,0 +1,32 @@
+/* Colors */
+$grey: #c5c6c7;
+$primary: #0b0c10;
+$secondary: #1f2833;
+$accent: #66fcf1;
+$muted-accent: #45a29e;
+$white: #eae7dc;
+$black: darken($grey, 25%);
+
+$primary-background-color: $secondary;
+
+/* Typography */
+$header-text-color: $muted-accent;
+$primary-text-color: $black;
+$inverted-text-color: $white;
+$accent-text-color: $muted-accent;
+
+/* Sidebar */
+$sidebar-width: 300px;
+$sidebar-text-color: $white;
+$sidebar-background-color: $primary;
+$sidebar-border-color: $primary;
+
+/* Mobile Menu */
+$mobile-menu-height: 50px;
+
+/* Footer (of sidebar) */
+$footer-text-color: $white;
+
+/* Post */
+$post-background-color: $primary;
+$post-accent-color: $muted-accent;

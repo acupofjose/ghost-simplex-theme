@@ -1,12 +1,12 @@
 /* Colors */
 $grey: #8e8d8a;
-$off-white: #d8c3a5;
+$primary: #d8c3a5;
 $accent: #e85a4f;
 $muted-accent: #e98074;
 $white: #eae7dc;
 $black: darken($grey, 25%);
 
-$primary-background-color: $off-white;
+$primary-background-color: $primary;
 
 /* Typography */
 $header-text-color: $accent;
@@ -19,6 +19,9 @@ $sidebar-width: 300px;
 $sidebar-text-color: $white;
 $sidebar-background-color: $accent;
 $sidebar-border-color: $muted-accent;
+
+/* Mobile Menu */
+$mobile-menu-height: 50px;
 
 /* Footer (of sidebar) */
 $footer-text-color: $white;

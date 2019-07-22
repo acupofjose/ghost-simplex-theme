@@ -1,13 +1,16 @@
 {{#if feature_image}}
-<article class="post post-excerpt has-featured-image" {{post_class}}>
+<div class="post-container has-featured-image">
 {{else}}
-<article class="post post-excerpt" {{post_class}}>
+<div class="post-container">
 {{/if}}
+<article class="post post-excerpt" {{post_class}}>
   <time class="publish-date">
     {{date format="MMMM Do YYYY"}}
   </time>
   {{#if feature_image}}
-    <img src="{{feature_image}}" alt="feature" />
+    <a class="feature-link" href="{{url}}" alt="{{slug}}">
+      <img src="{{feature_image}}" alt="feature" />
+    </a>
   {{/if}}
   <div class="content">
     <h1 class="title">
@@ -26,3 +29,4 @@
     </div>
   </div>
 </article>
+</div>

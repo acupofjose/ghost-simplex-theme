@@ -1,0 +1,41 @@
+nav#mobile-menu {
+  display: none;
+  @include respond-below(md) {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $mobile-menu-height;
+    background: $sidebar-background-color;
+
+    a.site-link {
+      display: block;
+      text-align: center;
+      border-bottom: none;
+      font-size: 1.25em;
+      font-weight: bold;
+
+      img {
+        box-sizing: border-box;
+        max-height: 32px;
+      }
+    }
+  }
+}
+
+footer#mobile-footer {
+  display: none;
+  @include respond-below(md) {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.75em;
+    a {
+      border: none;
+    }
+  }
+}

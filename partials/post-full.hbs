@@ -1,0 +1,28 @@
+{{#if feature_image}}
+<div class="post-container post-full has-featured-image">
+{{else}}
+<div class="post-container post-full">
+{{/if}}
+{{#if feature_image}}
+  <div
+    class="featured-image"
+    style="background-image: url('{{feature_image}}')"
+  ></div>
+{{/if}}
+<article class="post" {{post_class}}>
+  <h1 class="title">
+    <a href="{{url}}">
+      {{title}}
+    </a>
+  </h1>
+  <div class="tags">
+    {{tags}}
+  </div>
+  <div class="content">
+    <section class="full">
+      {{content}}
+    </section>
+    <footer class="meta"></footer>
+  </div>
+</article>
+</div>

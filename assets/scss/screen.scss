@@ -1,9 +1,16 @@
+/* 3rd party css */
 @import "vendor/balloon-css/balloon";
-@import "partials/vars";
+
+/* SASS Specific Utility Declarations */
+@import "utils/mixins";
+@import "themes/dark";
+
+/* Styles */
 @import "partials/reset";
 @import "partials/compat";
 @import "partials/default";
 @import "partials/pagination";
 @import "partials/typography";
 @import "partials/sidebar";
+@import "partials/mobile";
 @import "partials/post";

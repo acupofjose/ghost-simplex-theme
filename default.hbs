@@ -12,12 +12,14 @@
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
+    {{> "mobile-menu"}}
     <div class="wrapper">
       <div class="sidebar-wrapper">
         {{> "sidebar"}}
       </div>
       <div class="content-wrapper">
         {{{body}}}
+        {{> "mobile-footer"}}
       </div>
     </div>
     <script
