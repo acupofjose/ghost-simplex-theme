@@ -12,7 +12,10 @@ $(function() {
     }
   });
 
-  setTimeout(() => $grid.isotope(), 1000);
+  // Seems isotope has some trouble getting initial load right?
+  setTimeout(() => $grid.isotope(), 250);
+
+  $(window).smartresize(() => $grid.isotope());
 
   // Gallery
   $(".kg-gallery-container").prepend(

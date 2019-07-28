@@ -2,12 +2,18 @@
   display: block;
   margin: 0 auto;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 
   &.excerpts {
     padding: 10px;
 
+    @include respond-below(md) {
+      margin-top: 50px;
+    }
+
     @include respond-below(sm) {
+      margin-top: 65px;
       padding: 0;
     }
   }
@@ -24,7 +30,7 @@
     max-width: 100%;
   }
 
-  @include respond-below(md) {
+  @include respond-below(sm) {
     max-width: 100%;
     &.post-full:not(.has-featured-image) {
       margin-top: calc(#{$mobile-menu-height} + 30px);
