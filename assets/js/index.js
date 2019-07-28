@@ -1,9 +1,24 @@
 $(function() {
   hljs.initHighlightingOnLoad();
 
+  // Masonry
+  var $grid = $(".grid");
+  $grid.isotope({
+    itemSelector: ".grid-item",
+    percentPosition: true,
+    masonry: {
+      columnWidth: ".grid-item",
+      isFitWidth: true
+    }
+  });
+
+  setTimeout(() => $grid.isotope(), 1000);
+
+  // Gallery
   $(".kg-gallery-container").prepend(
     "<div id='kg-gallery-zoom' style='display:none;'><img src=''/><div id='kg-gallery-buttons'></div></div>"
   );
+
   $(".kg-gallery-container .kg-gallery-image img").each(function(e) {
     var thissrc = $(this).attr("src");
     var label = e + 1;
@@ -15,6 +30,7 @@ $(function() {
         "</span>"
     );
   });
+
   $(".kg-gallery-btn").click(function(e) {
     e.preventDefault();
     $("#kg-gallery-zoom img").attr("src", $(this).data("src"));

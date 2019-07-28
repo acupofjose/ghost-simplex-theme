@@ -1,24 +1,31 @@
 .post-feed {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 
   &.excerpts {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    overflow-x: auto;
-    height: 90vh;
-    min-height: 800px;
-    @include respond-above(md) {
-      min-height: 100vh;
+    padding: 10px;
+
+    @include respond-below(sm) {
+      padding: 0;
     }
   }
 }
 
 .post-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+
+  &.post-full {
+    max-width: 100%;
+  }
+
   @include respond-below(md) {
+    max-width: 100%;
     &.post-full:not(.has-featured-image) {
       margin-top: calc(#{$mobile-menu-height} + 30px);
     }
@@ -66,12 +73,10 @@ article.post {
   }
 
   &.post-excerpt {
-    display: block;
-    min-width: 350px;
+    float: left;
     border-radius: 3px;
+    box-sizing: border-box;
     z-index: 10;
-    flex-grow: 1;
-    max-width: 500px;
     margin: 30px 15px;
     box-shadow: 2px 2px 4px darken($post-background-color, 50%);
     transition: background 0.2s ease-in-out, transform 0.2s ease-in-out,
