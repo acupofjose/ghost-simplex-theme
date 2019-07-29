@@ -1,34 +1,36 @@
 {{#if feature_image}}
 <div class="post-container has-featured-image grid-item">
 {{else}}
-<div class="post-container">
+<div class="post-container grid-item">
 {{/if}}
-<article class="post post-excerpt" {{post_class}}>
-  <time class="publish-date">
-    {{date format="MMMM Do YYYY"}}
-  </time>
-  {{#if feature_image}}
-    <a class="feature-link" href="{{url}}" alt="{{slug}}">
-      <div style="background-image:url('{{feature_image}}')"></div>
-    </a>
-  {{/if}}
-  <div class="content">
-    <h1 class="title">
-      <a href="{{url}}">
-        {{title}}
+  <article class="post post-excerpt" {{post_class}}>
+    <time class="publish-date">
+      {{date format="MMMM Do YYYY"}}
+    </time>
+    {{#if feature_image}}
+      <a class="feature-link" href="{{url}}" alt="{{slug}}">
+        <div style="background-image:url('{{feature_image}}')"></div>
       </a>
-    </h1>
-    <div class="author">by: {{#foreach authors}}<a href="{{url}}" class="static-avatar">{{name}}</a>{{/foreach}}</div>
-    <div class="tags">
-      {{tags}}
+    {{/if}}
+    <div class="content">
+      <h1 class="title">
+        <a href="{{url}}">
+          {{title}}
+        </a>
+      </h1>
+      <div class="author">by: {{#foreach authors}}<a href="{{url}}" class="static-avatar">{{name}}</a>{{/foreach}}</div>
+      <div class="tags">
+        {{tags}}
+      </div>
+      <div class="clearfix"></div>
+      <div class="content">
+        <section class="full">
+          {{excerpt characters="275"}}
+        </section>
+        <footer class="meta"></footer>
+      </div>
     </div>
     <div class="clearfix"></div>
-    <div class="content">
-      <section class="full">
-        {{excerpt characters="275"}}
-      </section>
-      <footer class="meta"></footer>
-    </div>
-  </div>
-</article>
+  </article>
+  <div class="clearfix"></div>
 </div>

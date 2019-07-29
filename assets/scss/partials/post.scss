@@ -21,11 +21,12 @@
     max-width: 100%;
   }
 
-  @include respond-below(sm) {
+  @include respond-below(md) {
     max-width: 100%;
-    &.post-full:not(.has-featured-image) {
-      margin-top: calc(#{$mobile-menu-height} + 30px);
-    }
+  }
+
+  &.post-full:not(.has-featured-image) {
+    margin-top: calc(#{$mobile-menu-height} + 30px);
   }
 
   &.has-featured-image {
@@ -73,7 +74,6 @@ article.post {
   }
 
   &.post-excerpt {
-    float: left;
     border-radius: 3px;
     box-sizing: border-box;
     z-index: 10;
@@ -153,9 +153,11 @@ article.post {
     transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
 
-  .author-info {
+  footer.author-info {
+    display: flex;
+    flex-direction: row;
     position: absolute;
-    bottom: -105px;
+    top: 100%;
     left: 0;
     width: 90%;
     padding: 0;
@@ -167,6 +169,7 @@ article.post {
     box-shadow: 2px 2px 4px darken($post-background-color, 50%);
 
     .author {
+      flex: 1;
       margin: 0;
       color: $inverted-text-color;
 
