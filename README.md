@@ -24,7 +24,7 @@ Currently there is a dark theme and a light theme available for download.
 - [x] Sidebar
 - [x] Default & Index Templates
 - [x] Post Excerpt Template
-- [ ] Compatibility with `.kg-gallery-*`
+- [x] Compatibility with `.kg-gallery-*`
 - [x] Single Post Template
 - [x] Author Template
 - [x] Category/Tags Template
