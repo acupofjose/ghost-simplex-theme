@@ -59,25 +59,29 @@
     }
 
     footer.site-footer {
-      position: absolute;
       width: $sidebar-width;
-      bottom: -10px;
       text-align: center;
       line-height: 1.5rem;
       padding: 10px 0 30px;
       color: $footer-text-color;
 
       section.social-links {
+        padding: 10px 0;
         a {
           color: $footer-text-color;
+          font-size: 1.25rem;
+          margin: 0 5px;
         }
       }
-      section.copyright {
+
+      section.copyright,
+      section.published-with {
         font-size: 0.75rem;
         a {
           color: $footer-text-color;
           border-color: $footer-text-color;
           border-width: 1px;
+          font-weight: bold;
         }
       }
     }
