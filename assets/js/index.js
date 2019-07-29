@@ -1,9 +1,9 @@
 $(function() {
   hljs.initHighlightingOnLoad();
 
-  // Masonry
-  var $grid = $(".grid");
-  $grid.isotope({
+  // Masonry for Posts
+  var $posts = $(".grid");
+  $posts.isotope({
     itemSelector: ".grid-item",
     percentPosition: true,
     masonry: {
@@ -13,15 +13,14 @@ $(function() {
   });
 
   // Seems isotope has some trouble getting initial load right?
-  setTimeout(() => $grid.isotope(), 50);
-  $(window).smartresize(() => $grid.isotope());
+  setTimeout(() => $posts.isotope(), 50);
+  $(window).smartresize(() => $posts.isotope());
 
   // Mobile Menu
   $("nav#mobile-header")
     .find(".menu-toggle")
-    .click(e => {
-      $("body").toggleClass("mobile-menu-open");
-    });
+    .click(e => $("body").toggleClass("mobile-menu-open"));
+  $("body > .overlay").click(e => $("body").toggleClass("mobile-menu-open"));
 
   // Gallery
   // Generate a hidden full screen container view
