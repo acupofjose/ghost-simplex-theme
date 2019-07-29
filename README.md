@@ -3,10 +3,6 @@
 [![Build Status](https://travis-ci.org/acupajoe/ghost-simplex-theme.svg?branch=master)](https://travis-ci.org/acupajoe/ghost-simplex-theme)
 ![License](https://img.shields.io/github/license/acupajoe/ghost-simplex-theme.svg)
 
-**Currently a WIP.**
-
-After installing Ghost, I wanted to figure out how the themeing system was set up for developers. So what better way to do that than by just making a theme myself?
-
 Simplex is heavily based on the shipped [Casper theme](https://github.com/TryGhost/Casper) for inspiration.
 
 ## What you get.
@@ -28,6 +24,8 @@ Currently there is a dark theme and a light theme available for download.
 - [x] Category/Tags Template
 - [x] Responsiveness
 - [ ] Provision for Featured Posts
+- [x] Light Theme
+- [x] Dark Theme
 
 **Meta**
 
@@ -39,6 +37,16 @@ Currently there is a dark theme and a light theme available for download.
 - [?] Setup Gulp to build both the `light` and `dark` themes as part of the build process
 - [x] Clearer commenting
 - [ ] Setup linting
+
+## Customizing.
+
+1. (Optional) [Setup a local ghost environment.](https://ghost.org/docs/install/local/)
+2. Clone this repo into `content/themes`
+3. Install devDependencies
+4. Set your theme in `assets/screen.scss`
+5. `npm run develop`
+
+When finished you can run `npm run build` to output your customized theme .zip to `dist`.
 
 ## Libraries Leveraged.
 
