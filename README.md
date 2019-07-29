@@ -1,9 +1,13 @@
-# Ghost Simplex Theme.
+<h1 align="center">Ghost Simplex Theme.</h1>
 
-[![Build Status](https://travis-ci.org/acupajoe/ghost-simplex-theme.svg?branch=master)](https://travis-ci.org/acupajoe/ghost-simplex-theme)
-![License](https://img.shields.io/github/license/acupajoe/ghost-simplex-theme.svg)
+<p align="center">
+  <a href="https://travis-ci.org/acupajoe/ghost-simplex-theme"><img alt="build status" src="https://travis-ci.org/acupajoe/ghost-simplex-theme.svg?branch=master"/></a>
+  <img src="https://img.shields.io/github/license/acupajoe/ghost-simplex-theme.svg">
+</p>
 
-![ghost-simplex](.github/preview.png)
+<p align="center">
+  <img src=".github/preview.png" alt="preview"/>
+</p>
 
 Simplex is heavily based on the shipped [Casper theme](https://github.com/TryGhost/Casper) for inspiration.
 
