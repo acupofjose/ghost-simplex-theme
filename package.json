@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "gulp develop",
-    "build": "gulp build",
+    "build": "gulp build && gulp zip",
     "test": "gscan ."
   },
   "browserslist": [
