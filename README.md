@@ -23,9 +23,9 @@ Currently there is a dark theme and a light theme available for download.
 - [x] Default & Index Templates
 - [x] Post Excerpt Template
 - [ ] Compatibility with `.kg-gallery-*`
-- [ ] Single Post Template
-- [ ] Author Template
-- [ ] Category/Tags Template
+- [x] Single Post Template
+- [x] Author Template
+- [x] Category/Tags Template
 - [x] Responsiveness
 - [ ] Provision for Featured Posts
 
@@ -36,8 +36,8 @@ Currently there is a dark theme and a light theme available for download.
 - [x] Setup Travis to verify builds with Ghost's provided `gscan` util
 - [x] Break scss into understandable / maintainable partials
 - [x] Break templates (`hbs`) into understanable / maintainable partials
-- [ ] Setup Gulp to build both the `light` and `dark` themes as part of the build process
-- [ ] Clearer commenting
+- [?] Setup Gulp to build both the `light` and `dark` themes as part of the build process
+- [x] Clearer commenting
 - [ ] Setup linting
 
 ## Libraries Leveraged.
