@@ -1,7 +1,7 @@
 {
   "name": "ghost-simplex",
   "description": "It's a simple ghost theme, what more do you want?",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "ghost-api": "v2"
   },
