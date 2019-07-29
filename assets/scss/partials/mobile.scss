@@ -1,5 +1,21 @@
-nav#mobile-menu {
+body {
+  transition: margin 0.25s ease-in-out;
+
+  &.mobile-menu-open {
+    margin-left: $sidebar-width;
+
+    nav#mobile-header {
+      left: $sidebar-width;
+      .menu {
+        left: 0;
+      }
+    }
+  }
+}
+
+nav#mobile-header {
   display: none;
+
   @include respond-below(md) {
     position: fixed;
     display: flex;
@@ -11,6 +27,18 @@ nav#mobile-menu {
     right: 0;
     height: $mobile-menu-height;
     background: $sidebar-background-color;
+    transition: left 0.25s ease-in-out;
+
+    i.menu-toggle {
+      position: absolute;
+      left: 25px;
+      font-size: 24px;
+      color: $inverted-text-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     a.site-link {
       display: block;
@@ -22,6 +50,37 @@ nav#mobile-menu {
       img {
         box-sizing: border-box;
         max-height: 32px;
+      }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: -$sidebar-width;
+      bottom: 0;
+      color: $inverted-text-color;
+      width: $sidebar-width;
+      background: $sidebar-background-color;
+      transition: left 0.25s ease-in-out;
+      .inner {
+        padding: 20px;
+
+        h1,
+        h2 {
+          color: $inverted-text-color;
+        }
+        ul {
+          margin-top: 50px;
+          li {
+            margin: 0;
+          }
+        }
+        a {
+          display: block;
+          color: $inverted-text-color;
+          font-size: 2rem;
+          padding: 20px 0;
+        }
       }
     }
   }

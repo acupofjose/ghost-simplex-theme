@@ -18,9 +18,11 @@
         {{title}}
       </a>
     </h1>
+    <div class="author">by: {{#foreach authors}}<a href="{{url}}" class="static-avatar">{{name}}</a>{{/foreach}}</div>
     <div class="tags">
       {{tags}}
     </div>
+    <div class="clearfix"></div>
     <div class="content">
       <section class="full">
         {{excerpt characters="275"}}

@@ -13,9 +13,15 @@ $(function() {
   });
 
   // Seems isotope has some trouble getting initial load right?
-  setTimeout(() => $grid.isotope(), 250);
-
+  setTimeout(() => $grid.isotope(), 50);
   $(window).smartresize(() => $grid.isotope());
+
+  // Mobile Menu
+  $("nav#mobile-header")
+    .find(".menu-toggle")
+    .click(e => {
+      $("body").toggleClass("mobile-menu-open");
+    });
 
   // Gallery
   $(".kg-gallery-container").prepend(

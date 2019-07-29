@@ -1,0 +1,32 @@
+.author {
+  display: block;
+  margin: 15px auto;
+  max-width: calc(700px - 15px);
+  padding: 15px;
+  box-sizing: border-box;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  img.profile-image {
+    float: left;
+    width: 128px;
+    height: 128px;
+    padding: 15px 15px 15px 0;
+  }
+
+  .author-meta {
+    display: flex;
+    & > * {
+      padding: 0 5px;
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}

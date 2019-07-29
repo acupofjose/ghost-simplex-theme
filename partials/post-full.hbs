@@ -9,20 +9,59 @@
     style="background-image: url('{{feature_image}}')"
   ></div>
 {{/if}}
-<article class="post post-full" {{post_class}}>
-  <h1 class="title">
-    <a href="{{url}}">
-      {{title}}
-    </a>
-  </h1>
-  <div class="tags">
-    {{tags}}
+  <article class="post post-full" {{post_class}}>
+    <h1 class="title">
+      <a href="{{url}}">
+        {{title}}
+      </a>
+    </h1>
+    <time class="publish-date">
+      {{date format="MMMM Do YYYY"}}
+    </time>
+    <div class="tags">
+      {{tags}}
+    </div>
+    <div class="content">
+      <section class="full">
+        {{content}}
+      </section>
+      <footer class="meta"></footer>
+    </div>
+    <div class="author-info">
+      {{#foreach authors}}
+        <div class="author">
+          {{#if profile_image}}
+            <img class="profile-image" src="{{profile_image}}" alt="{{name}}'s Picture" />
+          {{/if}}
+          <h1 class="name">
+            <a href={{url}}>{{name}}</a>
+          </h1>
+          <div class="author-meta">
+            {{#if location}}
+                <div class="author-location">{{location}} <span class="bull">&bull;</span></div>
+            {{/if}}
+            {{#if website}}
+                <a class="social-link social-link-wb" href="{{website}}" target="_blank" rel="noopener"><i class="fa fa-globe"></i></a>
+            {{/if}}
+            {{#if twitter}}
+                <a class="social-link social-link-tw" href="{{twitter_url}}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            {{/if}}
+            {{#if facebook}}
+                <a class="social-link social-link-fb" href="{{facebook_url}}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+            {{/if}}
+            <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      {{/foreach}}
   </div>
-  <div class="content">
-    <section class="full">
-      {{content}}
-    </section>
-    <footer class="meta"></footer>
-  </div>
-</article>
+  </article>
 </div>
+<div class="clearfix"></div>
+
+<script>
+  var disqus_config = function () {
+    this.page.url = '{{url absolute=true}}';
+    this.page.identifier = '{{comment_id}}';
+  };
+</script>

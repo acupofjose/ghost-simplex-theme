@@ -12,6 +12,12 @@ pre {
   overflow-x: auto;
 }
 
+.clearfix {
+  display: block;
+  float: none;
+  clear: both;
+}
+
 body > .wrapper {
   display: inline-block;
 
@@ -41,5 +47,20 @@ body > .wrapper {
       box-sizing: border-box;
       width: calc(100vw - #{$sidebar-width});
     }
+  }
+}
+
+main > .inner {
+  &:not(.no-padding) {
+    padding: 15px;
+  }
+
+  @include respond-below(md) {
+    margin-top: 50px;
+  }
+
+  @include respond-below(sm) {
+    margin-top: 65px;
+    padding: 0;
   }
 }

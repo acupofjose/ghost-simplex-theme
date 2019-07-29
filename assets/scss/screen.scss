@@ -3,14 +3,20 @@
 
 /* SASS Specific Utility Declarations */
 @import "utils/mixins";
-@import "themes/light";
+@import "utils/reset";
+
+/* SELECTED THEME (Just declares variables) */
+@import "themes/dark";
 
 /* Styles */
-@import "partials/reset";
 @import "partials/compat";
 @import "partials/default";
-@import "partials/pagination";
 @import "partials/typography";
 @import "partials/sidebar";
 @import "partials/mobile";
+@import "partials/cards";
+
+/* Contexts / Templates */
+@import "partials/author";
 @import "partials/post";
+@import "partials/pagination";
