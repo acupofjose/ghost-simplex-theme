@@ -50,17 +50,21 @@ body > .wrapper {
   }
 }
 
-main > .inner {
-  &:not(.no-padding) {
-    padding: 15px;
-  }
+main#site-main {
+  position: relative;
 
-  @include respond-below(md) {
-    margin-top: 50px;
-  }
+  & > .inner {
+    &:not(.no-padding) {
+      padding: 15px;
+    }
 
-  @include respond-below(sm) {
-    margin-top: 65px;
-    padding: 0;
+    @include respond-below(md) {
+      margin-top: 50px;
+    }
+
+    @include respond-below(sm) {
+      margin-top: 65px;
+      padding: 0;
+    }
   }
 }

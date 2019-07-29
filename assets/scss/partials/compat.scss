@@ -9,47 +9,63 @@
 .kg-gallery-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
+
   .kg-gallery-image {
     flex: 1;
     box-sizing: border-box;
+    padding: 15px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
     img {
-      max-height: 250px;
-      max-width: 250px;
+      display: block;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+      box-sizing: border-box;
     }
   }
 }
 
 #kg-gallery-zoom {
-  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  background-color: rgba($primary-background-color, 0.95);
   height: 100%;
   left: 0px;
   overflow: hidden;
   padding: 30px;
-  position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 10000;
+  box-sizing: border-box;
+
+  img {
+    cursor: zoom-out;
+    height: auto;
+    height: auto;
+    left: 50%;
+    max-height: 80%;
+    max-width: 80%;
+    position: absolute;
+    top: 0;
+    top: 5%;
+    transform: translateX(-50%);
+    width: auto;
+  }
 }
-#kg-gallery-zoom img {
-  cursor: zoom-out;
-  height: auto;
-  height: auto;
-  left: 50%;
-  max-height: 80%;
-  max-width: 80%;
-  position: absolute;
-  top: 0;
-  top: 5%;
-  transform: translateX(-50%);
-  width: auto;
-}
+
 .kg-gallery-image img {
   cursor: zoom-in;
 }
+
 .kg-gallery-btn {
-  background-color: #000;
+  background-color: $secondary-background-color;
   border-radius: 50%;
   color: #fff;
   display: inline-block;
@@ -58,16 +74,32 @@
   margin: 0.25em;
   text-align: center;
   width: 30px;
-}
-.kg-gallery-btn:active,
-.kg-gallery-btn:focus {
-  background-color: #ccff00;
+
+  &:before {
+    content: attr(data-index);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active,
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $muted-accent;
+  }
 }
 
 #kg-gallery-buttons {
   bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
+  left: 0;
+  right: 0;
   position: fixed;
   text-align: center;
   width: 100%;
