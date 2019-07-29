@@ -155,7 +155,6 @@ article.post {
 
   .author-info {
     position: absolute;
-    background-color: $post-accent-color;
     bottom: -105px;
     left: 0;
     width: 90%;
@@ -164,6 +163,8 @@ article.post {
     border-radius: 0 0 5px 5px;
     box-sizing: border-box;
     z-index: 10;
+    background-color: $post-accent-color;
+    box-shadow: 2px 2px 4px darken($post-background-color, 50%);
 
     .author {
       margin: 0;
@@ -185,6 +186,10 @@ article.post {
 
       p {
         margin: 5px 0;
+      }
+
+      a {
+        border-bottom: none;
       }
 
       img.profile-image {
