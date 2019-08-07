@@ -9,6 +9,8 @@
   <img src=".github/preview.png" alt="preview"/>
 </p>
 
+Demos: [Light Theme](https://simplex-light.acupajoe.io), [Dark Theme](https://simplex-dark.acupajoe.io)
+
 Simplex is heavily based on the shipped [Casper theme](https://github.com/TryGhost/Casper) for inspiration.
 
 ## What you get.
