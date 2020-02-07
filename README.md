@@ -13,7 +13,12 @@ Demos: [Light Theme](https://simplex-light.acupajoe.io), [Dark Theme](https://si
 
 Simplex is heavily based on the shipped [Casper theme](https://github.com/TryGhost/Casper) for inspiration.
 
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Facupajoe%2Fghost-simplex-theme.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Facupajoe%2Fghost-simplex-theme?ref=badge_large)
+
 ## What you get.
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Facupajoe%2Fghost-simplex-theme.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Facupajoe%2Fghost-simplex-theme?ref=badge_shield)
+
 
 A fully responsive, easily themeable, customizable theme that is built and minified for speed.
 
